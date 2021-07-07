@@ -1,21 +1,71 @@
-.home {
+header{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  margin: 0 auto;
+  .welcome{
+    padding:  0 55rem;
+    .hidden{
+      width: 100%;
+      padding: 2rem 0;
+      
+    }
+  }
+  
+  @media @mobile{
+    max-width: 515px;
+    width: 100%;
+    .welcome{
+      width: 100%;
+      padding: 0 1rem;
+      border-bottom: 2px dashed @navigation-border;
+    } 
+  }
+  
+}
 
+.home {
+  @media @mobile{
+    max-width: 500px;
+    width: 100%;
+    align-content: center;
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @mobile{
+      flex-direction: column;
+      align-items: baseline;
+      width: 100%;
+      padding: 1rem 0;
+      margin: 0 1rem;
+      
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 90%;
+        padding: 1rem 0;
+        margin: 1rem 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width: 100%;
+        padding:  1rem 1rem; 
+        img{
+          width: 100%;
+        }
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +76,13 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      width: 95%;
+      flex-direction: column-reverse;
+      border-bottom: 2px dashed @navigation-border;
+      margin-bottom: 2rem;
+      padding: 3rem 1rem;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -45,6 +102,14 @@
     img {
       border-radius: 10px;
     }
+    @media @mobile{
+      width: 90%;
+      margin: 1rem auto;
+      img{
+        width: 100%;
+        
+      }
+    }
   }
 
   .content-pick {
@@ -56,6 +121,18 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+    @media @mobile{
+      flex-direction: column;
+      align-items: baseline;
+      flex-wrap: wrap;
+      width:100%;
+      max-width: 515px;
+      .destination{
+        width: 100%;
+        padding: 0 9rem 0 5rem;
+        margin: 1rem;
+      }
     }
   }
 }// home
